@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machine</title>
+</head>
+<body>
+{% for machine in object_list %}
+<h4><p>{{ machine.name }}</p></h4>
+{% for category in machine.general.all %}
+<p>{{ category.category.name }}</p>
+{% endfor %}
+{% endfor %}
+</body>
+</html>
